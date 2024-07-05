@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Resetting default margin and using Inter font family */
+body {
+    margin: 0;
+    background-color: #efebe8;
+    font-family: "Inter", sans-serif;
+}
+
+/* CSS variables for font sizes and weights */
+:root {
+    --body-font: "Inter", sans-serif;
+    --biggest-font-size: 2.5rem;
+    --h1-font-size: 1.75rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+}
+
+/* Fixed sidebar styling */
+header {
+    width: 20vw;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    padding: 20px;
+    background-color: #efebe8;
+    color: #1e1e1e;
+    height: 100vh;
+    border-right: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Styling for content inside the sidebar */
+.header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* Main content section */
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Navigation styling */
+nav {
+    align-self: flex-end;
+    width: 100%;
+    padding-top: 4rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+nav ul li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+nav ul li a {
+    color: #1e1e1e;
+    text-decoration: none;
+    position: relative; 
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Underline effect */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #1e1e1e;
+    transition: width 0.3s ease, transform 0.3s ease;
+    transform: translateX(-50%);
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    transform: translateX(-50%);
+}
+
+/* Grid container for images */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    max-width: 80vw;
+    margin-left: 30vw;
+}
+
+/* Image container styling */
+.image-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+/* Image inside container */
+.image-container img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Zoom effect on hover */
+.image-container:hover img {
+    transform: scale(1.05);
+}
+
+/* Text over image */
+.image-container span {
+    position: absolute;
+    left: 50%;
+    bottom: -3%;
+    transform: translate(-50%, -50%);
+    color: #1e1e1e;
+    font-size: small;
+    z-index: 1;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Show text on hover */
+.image-container:hover span {
+    opacity: 1;
+}
+
+/* Footer styling */
+footer {
+    color: #1e1e1e;
+    text-align: left;
+    padding-bottom: 30px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header {
+        width: 100%;
+        height: auto;
+        position: static;
+        border-right: none;
+        border-bottom: 1px solid black;
+    }
+
+    .header-content {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: auto;
+    }
+
+    nav {
+        padding-top: 1rem;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+
+    .container {
+        max-width: 100%;
+        margin-left: 0;
+        padding: 1rem;
+    }
+
+    .image-container {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (min-width: 1000px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
