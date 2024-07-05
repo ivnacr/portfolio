@@ -105,9 +105,8 @@ nav ul li a:hover::after {
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    max-width: 75vw;
-    margin-left: auto;
-    margin-right: 0;
+    max-width: 80vw;
+    margin-left: 30vw;
 }
 
 /* Image container styling */
@@ -164,17 +163,6 @@ footer {
         position: static;
         border-right: none;
         border-bottom: 1px solid black;
-    }
-
-    body {
-        justify-content: center; /* Center contents horizontally */
-    }
-
-    main {
-        display: flex;
-        justify-content: center; /* Center contents horizontally */
-        align-items: center; /* Center contents vertically */
-        flex-direction: column;
     }
 
     .header-content {
