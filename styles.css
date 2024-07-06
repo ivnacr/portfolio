@@ -106,7 +106,7 @@ nav ul li a:hover::after {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     max-width: 80vw;
-    margin-left: 30vw;
+    margin-left: 25vw;
 }
 
 /* Image container styling */
