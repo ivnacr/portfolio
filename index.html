@@ -120,11 +120,9 @@
 
         document.addEventListener("mouseout", destroyCursor);
 
-        document.addEventListener('DOMContentLoaded', function() {
-            if ('ontouchstart' in window || navigator.maxTouchPoints) {
-                document.querySelector('.custom-cursor').style.display = 'none';
-            }
-        });
+        if ('ontouchstart' in window || navigator.maxTouchPoints) {
+            cursor.style.display = 'none';
+        }
     </script>
 </body>
 </html>
