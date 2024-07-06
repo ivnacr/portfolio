@@ -219,6 +219,10 @@ footer {
     .image-container {
         min-width: 100%;
     }
+
+    footer {
+        display: none;
+    }
 }
 
 @media (max-width: 500px) {
