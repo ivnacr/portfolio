@@ -6,6 +6,7 @@ body {
     background-color: #efebe8;
     font-family: "Inter", sans-serif;
     cursor: none;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 /* CSS variables for font sizes and weights */
@@ -131,9 +132,10 @@ nav ul li a:hover::after {
 /* Grid container for images */
 .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     max-width: 80vw;
     margin-left: 25vw;
+    padding: 1rem;
 }
 
 /* Image container styling */
@@ -184,6 +186,17 @@ footer {
 }
 
 /* Responsive adjustments */
+@media (max-width: 1024px) {
+    header {
+        width: 25vw;
+    }
+
+    .container {
+        max-width: 75vw;
+        margin-left: 30vw;
+    }
+}
+
 @media (max-width: 768px) {
     header {
         width: 100%;
@@ -214,6 +227,7 @@ footer {
         max-width: 100%;
         margin-left: 0;
         padding: 1rem;
+        grid-template-columns: repeat(1, 1fr);
     }
 
     .image-container {
@@ -228,6 +242,10 @@ footer {
 @media (max-width: 500px) {
     .container {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .image-container span {
+        font-size: smaller;
     }
 }
 
