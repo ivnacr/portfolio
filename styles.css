@@ -199,7 +199,7 @@ footer {
 
 @media (max-width: 768px) {
     header {
-        width: 100%;
+        width: auto;
         height: auto;
         position: static;
         border-right: none;
@@ -225,13 +225,13 @@ footer {
 
     .container {
         max-width: 100%;
-        margin-left: 0;
-        padding: 1rem;
+        margin-left: auto;
+        padding: 0;
         grid-template-columns: repeat(1, 1fr);
     }
 
     .image-container {
-        min-width: 100%;
+        max-width: 100%;
     }
 
     footer {
