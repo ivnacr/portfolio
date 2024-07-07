@@ -53,9 +53,16 @@
       const links = document.querySelectorAll("a");
       let isCursorInited = false;
 
+      // Check if device supports touch events
+      const isTouchDevice = () => {
+          return ('ontouchstart' in window) || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
+      };
+
       const initCursor = () => {
-          cursor.classList.add("custom-cursor--init");
-          isCursorInited = true;
+          if (!isTouchDevice()) { // Initialize cursor only on non-touch devices
+              cursor.classList.add("custom-cursor--init");
+              isCursorInited = true;
+          }
       };
 
       const destroyCursor = () => {
@@ -83,6 +90,8 @@
 
           cursor.style = `translate: ${mouseX}px ${mouseY}px`;
       });
+
+      window.onload = initCursor;
 
       document.addEventListener("mouseout", destroyCursor);
   </script>
