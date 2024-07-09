@@ -25,49 +25,6 @@ body {
     --font-bold: 700;
 }
 
-.loader {
-    width: 4px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    opacity: 1;
-    color: #000;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    box-shadow: 
-      19px -19px 0 0px, 38px -19px 0 0px, 57px -19px 0 0px,
-      19px 0     0 5px, 38px 0     0 5px, 57px 0     0 5px,
-      19px 19px  0 0px, 38px 19px  0 0px, 57px 19px  0 0px;
-    transform: translateX(-38px);
-    animation: l26 2s infinite linear;
-  }
-  @keyframes l26 {
-    12.5% {box-shadow: 
-      19px -19px 0 0px, 38px -19px 0 0px, 57px -19px 0 5px,
-      19px 0     0 5px, 38px 0     0 0px, 57px 0     0 5px,
-      19px 19px  0 0px, 38px 19px  0 0px, 57px 19px  0 0px}
-    25%   {box-shadow: 
-      19px -19px 0 5px, 38px -19px 0 0px, 57px -19px 0 5px,
-      19px 0     0 0px, 38px 0     0 0px, 57px 0     0 0px,
-      19px 19px  0 0px, 38px 19px  0 5px, 57px 19px  0 0px}
-    50%   {box-shadow: 
-      19px -19px 0 5px, 38px -19px 0 5px, 57px -19px 0 0px,
-      19px 0     0 0px, 38px 0     0 0px, 57px 0     0 0px,
-      19px 19px  0 0px, 38px 19px  0 0px, 57px 19px  0 5px}
-    62.5% {box-shadow: 
-      19px -19px 0 0px, 38px -19px 0 0px, 57px -19px 0 0px,
-      19px 0     0 5px, 38px 0     0 0px, 57px 0     0 0px,
-      19px 19px  0 0px, 38px 19px  0 5px, 57px 19px  0 5px}
-    75%   {box-shadow: 
-      19px -19px 0 0px, 38px -19px 0 5px, 57px -19px 0 0px,
-      19px 0     0 0px, 38px 0     0 0px, 57px 0     0 5px,
-      19px 19px  0 0px, 38px 19px  0 0px, 57px 19px  0 5px}
-    87.5% {box-shadow: 
-      19px -19px 0 0px, 38px -19px 0 5px, 57px -19px 0 0px,
-      19px 0     0 0px, 38px 0     0 5px, 57px 0     0 0px,
-      19px 19px  0 5px, 38px 19px  0 0px, 57px 19px  0 0px}
-  }
-
 /* Fixed sidebar styling */
 header {
     width: 20vw;
@@ -267,7 +224,7 @@ footer {
     }
 
     .container {
-        max-width: auto;
+        max-width: 100%;
         margin-left: auto;
         padding: 0;
         grid-template-columns: repeat(1, 1fr);
