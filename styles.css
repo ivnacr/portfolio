@@ -131,6 +131,7 @@ nav ul li a:hover::after {
 
 /* Grid container for images */
 .container {
+    align-items: start;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     max-width: 80vw;
@@ -177,6 +178,15 @@ nav ul li a:hover::after {
 .image-container:hover span {
     opacity: 1;
 }
+
+.image-caption {
+    display: block;
+    text-align: center;
+    font-size: small;
+    color: #1e1e1e;
+    margin-top: 0.5rem;
+    line-height: 1.4;
+  }
 
 /* Footer styling */
 footer {
@@ -254,3 +264,96 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+.cover-img {
+    margin-top: 2rem;
+}
+
+/* Modal Lightbox */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.95);
+    color: white;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Modal content layout */
+.modal-content {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2rem;
+    max-width: 90vw;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Scrollable image list */
+.image-gallery {
+    flex: 3;
+    overflow-y: auto;
+    padding-right: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc transparent;
+}
+
+.image-gallery img {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+/* Close button */
+.modal .close {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    font-size: 2rem;
+    color: white;
+    z-index: 10000;
+}
+
+/* Responsive behavior */
+@media (max-width: 1024px) {
+    .modal-content {
+        flex-direction: column;
+        overflow-y: auto;
+    }
+    .modal-sidebar {
+        position: static;
+        max-height: none;
+        width: 100%;
+    }
+    .image-gallery {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .modal {
+        padding: 1rem;
+    }
+
+    .modal-sidebar {
+        padding: 1rem;
+    }
+
+    .modal .close {
+        font-size: 1.75rem;
+        right: 1rem;
+    }
+}
+
+.custom-cursor {
+    z-index: 10000; /* must be higher than .modal */
+}
+

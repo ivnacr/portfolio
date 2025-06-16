@@ -1,106 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ivan Acero</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ivan Acero</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      height: 100%;
+      text-align: center;
+    }
+  </style>
+  <noscript>
     <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-        }
-        main {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            text-align: center;
-        }
+      body {
+        cursor: auto;
+      }
     </style>
-        <noscript>
-            <style>
-                body {
-                    cursor: auto;
-                }
-            </style>
-        </noscript>
+  </noscript>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <div class="main-content">
-                <p><span style="font-size: normal;"><a href="index.html" style="color: #1e1e1e; text-decoration: none;">ivan acero</a></span></br>
-                <span style="font-size: smaller;">Designer & Illustrator</span>
-                </p>
-                <p style="font-size: smaller;">work with me:<br>
-                <span><a href="mailto:hi@ivanacero.com" style="color: #1e1e1e;">hi@ivanacero.com</a></span>
-                </p>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">covers</a></li>
-                        <li><a href="other.html">other</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <footer>
-                <p style="font-size: .6rem;">&copy; 2024 Ivan Acero. All rights reserved.</p>
-            </footer>
+  <header>
+    <div class="header-content">
+      <div class="main-content">
+        <p>
+          <span style="font-size: normal;">
+            <a href="index.html" style="color: #1e1e1e; text-decoration: none;">ivan acero</a>
+          </span><br />
+          <span style="font-size: smaller;">Designer & Illustrator</span>
+        </p>
+        <p style="font-size: smaller;">
+          work with me:<br />
+          <span>
+            <a href="mailto:hi@ivanacero.com" style="color: #1e1e1e;">hi@ivanacero.com</a>
+          </span>
+        </p>
+        <nav>
+          <ul>
+            <li><a href="index.html">covers</a></li>
+            <li><a href="other.html">other</a></li>
+          </ul>
+        </nav>
+      </div>
+      <footer>
+        <p style="font-size: .6rem;">&copy; 2024 Ivan Acero. All rights reserved.</p>
+      </footer>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="image-container">
+        <picture>
+          <source srcset="assets/img/img1.webp" type="image/webp" />
+          <img src="assets/img/img1.png" alt="Cover" title="Cover" loading="lazy" class="cover-img" onclick="openModal()" />
+        </picture>
+        <div class="image-caption">
+          <p>coop coworking & coffee // Brand Identity</p>
         </div>
-    </header>
-    <main>
-        <div>
-            <p>coming soon.</p>
+      </div>
+    </div>
+
+    <div id="lightboxModal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+        <div class="image-gallery">
+          <picture><source srcset="assets/img/img1.webp" type="image/webp" /><img src="assets/img/img1.png" alt="Page 1" /></picture>
+          <picture><source srcset="assets/img/img2.webp" type="image/webp" /><img src="assets/img/img2.png" alt="Page 2" /></picture>
+          <picture><source srcset="assets/img/img3.webp" type="image/webp" /><img src="assets/img/img3.png" alt="Page 3" /></picture>
+          <picture><source srcset="assets/img/img4.webp" type="image/webp" /><img src="assets/img/img4.png" alt="Page 4" /></picture>
+          <picture><source srcset="assets/img/img5.webp" type="image/webp" /><img src="assets/img/img5.png" alt="Page 5" /></picture>
+          <picture><source srcset="assets/img/img6.webp" type="image/webp" /><img src="assets/img/img6.png" alt="Page 6" /></picture>
+          <picture><source srcset="assets/img/img7.webp" type="image/webp" /><img src="assets/img/img7.png" alt="Page 7" /></picture>
+          <picture><source srcset="assets/img/img8.webp" type="image/webp" /><img src="assets/img/img8.png" alt="Page 8" /></picture>
+          <picture><source srcset="assets/img/img9.webp" type="image/webp" /><img src="assets/img/img9.png" alt="Page 9" /></picture>
+          <picture><source srcset="assets/img/img10.webp" type="image/webp" /><img src="assets/img/img10.png" alt="Page 10" /></picture>
+          <picture><source srcset="assets/img/img11.webp" type="image/webp" /><img src="assets/img/img11.png" alt="Page 11" /></picture>
+          <picture><source srcset="assets/img/img12.webp" type="image/webp" /><img src="assets/img/img12.png" alt="Page 12" /></picture>
+          <picture><source srcset="assets/img/img13.webp" type="image/webp" /><img src="assets/img/img13.png" alt="Page 13" /></picture>
+          <picture><source srcset="assets/img/img14.webp" type="image/webp" /><img src="assets/img/img14.png" alt="Page 14" /></picture>
         </div>
-    </main>
-    <div class="custom-cursor"></div>
-  
-    <script>
-      const cursor = document.querySelector(".custom-cursor");
-      const links = document.querySelectorAll("a");
-      let isCursorInited = false;
+      </div>
+    </div>
+  </main>
 
-      // Check if device supports touch events
-      const isTouchDevice = () => {
-          return ('ontouchstart' in window) || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
-      };
+  <div class="custom-cursor"></div>
 
-      const initCursor = () => {
-          if (!isTouchDevice()) { // Initialize cursor only on non-touch devices
-              cursor.classList.add("custom-cursor--init");
-              isCursorInited = true;
-          }
-      };
+  <script>
+    const cursor = document.querySelector(".custom-cursor");
+    const links = document.querySelectorAll("a, .cover-img, .close");
+    let isCursorInited = false;
 
-      const destroyCursor = () => {
-          cursor.classList.remove("custom-cursor--init");
-          isCursorInited = false;
-      };
+    const isTouchDevice = () => {
+      return (
+        "ontouchstart" in window ||
+        navigator.maxTouchPoints > 0 ||
+        navigator.msMaxTouchPoints > 0
+      );
+    };
 
-      links.forEach((link) => {
-          link.addEventListener("mouseover", () => {
-              cursor.classList.add("custom-cursor--link");
-          });
+    const initCursor = () => {
+      if (!isTouchDevice()) {
+        cursor.classList.add("custom-cursor--init");
+        isCursorInited = true;
+      }
+    };
 
-          link.addEventListener("mouseout", () => {
-              cursor.classList.remove("custom-cursor--link");
-          });
+    const destroyCursor = () => {
+      cursor.classList.remove("custom-cursor--init");
+      isCursorInited = false;
+    };
+
+    links.forEach((link) => {
+      link.addEventListener("mouseover", () => {
+        cursor.classList.add("custom-cursor--link");
       });
-
-      document.addEventListener("mousemove", (e) => {
-          const mouseX = e.clientX;
-          const mouseY = e.clientY;
-
-          if (!isCursorInited) {
-              initCursor();
-          }
-
-          cursor.style = `translate: ${mouseX}px ${mouseY}px`;
+      link.addEventListener("mouseout", () => {
+        cursor.classList.remove("custom-cursor--link");
       });
+    });
 
-      window.onload = initCursor;
+    document.addEventListener("mousemove", (e) => {
+      const mouseX = e.clientX;
+      const mouseY = e.clientY;
 
-      document.addEventListener("mouseout", destroyCursor);
+      if (!isCursorInited) {
+        initCursor();
+      }
+
+      cursor.style = `translate: ${mouseX}px ${mouseY}px`;
+    });
+
+    window.onload = initCursor;
+    document.addEventListener("mouseout", destroyCursor);
+
+    function openModal() {
+      document.getElementById("lightboxModal").style.display = "flex";
+    }
+
+    function closeModal() {
+      document.getElementById("lightboxModal").style.display = "none";
+    }
+
+    function preloadImages() {
+      const formats = ["webp", "jpg"];
+      const basePath = ".assets/img/";
+      const baseNames = Array.from({ length: 14 }, (_, i) => `img${i + 1}`);
+
+      baseNames.forEach((name) => {
+        formats.forEach((format) => {
+          const img = new Image();
+          img.src = `${basePath}${name}.${format}`;
+        });
+      });
+    }
   </script>
 </body>
 </html>
